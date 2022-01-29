@@ -4,7 +4,8 @@ import { AppService } from './app.service';
 import { ConfigModule } frmom '/@nestjs/config';
 
 @Module({
-  imports: [ConfigModule.forRoot()],
+  imports: [ConfigModule.forRoot(),DatabaseModule,
+    GraphQLModule.forRoot()],
   controllers: [AppController],
   providers: [AppService],
 })
